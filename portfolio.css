@@ -1,6 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 
+* {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
 body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 25px;
@@ -11,6 +20,17 @@ body {
 
 h2 {
 	font-size: 2rem;
+	padding: 10%;
+/*	margin-top: 30%;*/
+/*	margin-bottom: 30%;*/
+}
+
+.text {
+	padding-right: 20%;
+	padding-left: 20%;
+	max-width: 100%;
+	font-size: 1.2rem;
+/*	margin-top: 10%;*/
 }
 
 .center {
@@ -30,11 +50,9 @@ h2 {
     background-color: #000000;
     position: fixed;
 	top: 0;
+	z-index: 1;
 }
 
-.nav-up {
-  top: -40px;
-}
 
 .mobnav {
 	display: none;
@@ -43,14 +61,98 @@ h2 {
     height: 10%;
     background-color: #000000;
     position: fixed;
+	z-index: 1;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.5vw;
+}
+
+.menu a {
+/*	background-color: #000000;*/
+	color: #FFFFFF;
+	padding: 20px;
+	font-size: 1.5vw;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	background-color: #FFFFFF;
+	color: #000000;
+	transition: background 1s;
+/*	padding:;*/
+	border-radius: 5%;
+}
+
+.logo {
+/*	padding: 10%;*/
+	width: 100%;
+	height: auto;
+	margin-top: 10%;
+/*
+	margin-left: auto;
+	margin-right: auto;
+*/
+}
+
+
+.project_grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 10%;
+	grid-row-gap: 1em;
+	padding-right: 30%;
+	padding-left: 30%;
+/*	padding-top: 5%;*/
+}
+
+.img_container {
+	position: relative;
+	width: auto;
+	height: auto;
+}
+
+.project_img_size {
+	width: 80%;
+	height: 80%;
+}
+
+.img_overlay {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.img_container:hover .img_overlay {
+	opacity: 1;
+}
+
+.idea_grid {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.ideaimg {
+	font-size: 400%;
 }
 
 #title {
-	color: #fff;
-	font-size: 1.25rem;
 	margin-right: auto;
-	padding: 20px;
-	margin-top: auto;
+/*	padding: 5px 20px 0px 20px;*/
+	margin-top: 1%;
+	margin-bottom: 0;
+	margin-left: 2%;
 
 }
 
@@ -59,70 +161,18 @@ h2 {
 	transition: transform 0.5s;
 }
 
-.container {
-	display: flex;
-	justify-content: space-between;
-}
-
-.menu {
-/*	background-color: #000000;*/
-	color: #FFFFFF;
-	padding: 20px;
-	font-size: 1.25rem;
-	text-align: center;
-	
-}
-
-.logo {
-/*	padding: 10%;*/
-	width: 100%;
-	height: auto;
-	margin-top: 6%;
-}
-
-.logo:hover {
-	transform: scale(5, 5);
-	transition: 0.6s;
-}
-
-#proimg {
+#profile_img {
 	border-radius: 50%;
-	border: thick 20px #FFFFFF;
-	padding: 10%;
-	width: 200px;
-	height: 200px;
+/*	border: 40px thick #FFFFFF;*/
+	padding: 2%;
+	width: 30%;
+	height: 30%;
 /*	margin-top: 100px;*/
 	
 	
 }
 
-#topimg {
-/*	margin-top: 10px;*/
-}
-
-#aboutme {
-	padding: 20%;
-	max-width: 50%;
-	font-size: 1.2rem;
-/*	margin-top: 1%;*/
-}
-
-
-
-a:hover {
-	background-color: #FFFFFF;
-	color: #000000;
-	transition: background 1s;
-/*	padding:;*/
-	border-radius: 5%;
-}
-
-a {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-
-/*Below is for the interactive mobile navigation*/
+/*Below is for the anchored mobile navigation*/
 
 #menuToggle
 {
@@ -154,7 +204,7 @@ a {
   -webkit-touch-callout: none;
 }
 
-
+/*Below is the specification for the animation of the burger button*/
 #menuToggle span
 {
   display: block;
@@ -205,12 +255,12 @@ a {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-
+/*Below is the specification for the menu design*/
 #menu
 {
   position: absolute;
-  width: 25%;
-  margin: -30% 0 0 -15%;
+  width: 45%;
+  margin: -30% 0 0 -20%;
   padding: 50px;
   padding-top: 125px;
   
@@ -225,10 +275,18 @@ a {
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+/*
 #menu li
 {
-  padding: 10px 0;
-  font-size: 20px;
+  
+}
+*/
+
+#menu a {
+	padding: 10px 0;
+	font-size: 20px;
+/*	text-decoration: none;*/
+	color: #FFFFFF;
 }
 
 #menuToggle input:checked ~ ul
@@ -236,16 +294,21 @@ a {
   transform: none;
 }
 
-@media screen and (max-width 1000px) {
-	.title {
-		font-size: 0.1rem;
-	}
-	.menu {
+/*Below is the specification for controlling how the page will display in alternate browsers*/
+
+/*
+@media only screen and (max-width: 600px) {
+	.title, .menu {
 		font-size: 0.75rem;
 	}
 }
+*/
 
-@media only screen and (max-width: 375px) {
+
+@media (max-width: 375px) {
+	h2 {
+		padding: 30%;
+	}
 	.largenav {
 		display: none;
 	}
@@ -258,12 +321,28 @@ a {
 		margin-top: 50%;
 	}
 	#mobtitle {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
+		margin-top: -2%;
+		margin-left: 40%;
+		text-align: center;
 	}
 	.logo img {
 		width: 100%;
 		height: auto;
 		padding: 1%;
+	}
+	#proimg {
+		height: 100%;
+		width: 100%;
+	}
+	.img_overlay {
+		opacity: 1;
+	}
+	.project_grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.idea_grid {
+		grid-template-columns: repeat(2, 1fr);
 	}
 	
 }
