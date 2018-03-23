@@ -40,17 +40,13 @@ h2 {
     margin-right: auto;
 }
 
-.right {
-	text-align: right;
-}
-
 .largenav {
     width: 100%;
     height: 10%;
     background-color: #000000;
     position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index: 5;
 }
 
 
@@ -73,7 +69,7 @@ h2 {
 .menu a {
 /*	background-color: #000000;*/
 	color: #FFFFFF;
-	padding: 20px;
+	padding: 19px;
 	font-size: 1.5vw;
 	text-align: center;
 	text-decoration: none;
@@ -92,12 +88,7 @@ h2 {
 	width: 100%;
 	height: auto;
 	margin-top: 10%;
-/*
-	margin-left: auto;
-	margin-right: auto;
-*/
 }
-
 
 .project_grid {
 	display: grid;
@@ -106,7 +97,6 @@ h2 {
 	grid-row-gap: 1em;
 	padding-right: 30%;
 	padding-left: 30%;
-/*	padding-top: 5%;*/
 }
 
 .img_container {
@@ -116,8 +106,8 @@ h2 {
 }
 
 .project_img_size {
-	width: 80%;
-	height: 80%;
+	width: 50%;
+	height: 50%;
 }
 
 .img_overlay {
@@ -144,7 +134,7 @@ h2 {
 }
 
 .ideaimg {
-	font-size: 400%;
+	font-size: 8vw;
 }
 
 #title {
@@ -171,6 +161,102 @@ h2 {
 	
 	
 }
+
+/*Below is the approriate styling for the timeline*/
+
+.timeline {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 1%;
+  background-color: white;
+  top: -2%;
+  bottom: -2%;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timecontain {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timecontain::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -3.5%;
+  background-color: #FF9F55;
+  border: 4px solid #5a9642;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(90,150,66,0.88);
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(90,150,66,0.88) transparent transparent;
+}
+
+.right::after {
+  left: -3%;
+}
+
+.contentleft {
+  padding: 20px 30px;
+  background: linear-gradient(to right, rgba(255,255,255,1) 85%, rgba(255,255,255,0.93) 93%, rgba(90,150,66,0.89) 98%, rgba(90,150,66,0.88) 100%);
+  position: relative;
+  border-radius: 6px;
+	color: #000000;
+	font-size: 1rem;
+}
+
+.contentright {
+  padding: 20px 30px;
+  background: linear-gradient(to left, rgba(255,255,255,1) 85%, rgba(255,255,255,0.93) 93%, rgba(90,150,66,0.89) 98%, rgba(90,150,66,0.88) 100%);
+  	position: relative;
+  	border-radius: 6px;
+	color: #000000;
+		font-size: 1rem;
+}
+
 
 /*Below is for the anchored mobile navigation*/
 
@@ -255,7 +341,7 @@ h2 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*Below is the specification for the menu design*/
+/*Below is the specification for the mobile menu design*/
 #menu
 {
   position: absolute;
@@ -275,12 +361,6 @@ h2 {
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-/*
-#menu li
-{
-  
-}
-*/
 
 #menu a {
 	padding: 10px 0;
@@ -294,18 +374,11 @@ h2 {
   transform: none;
 }
 
-/*Below is the specification for controlling how the page will display in alternate browsers*/
-
-/*
-@media only screen and (max-width: 600px) {
-	.title, .menu {
-		font-size: 0.75rem;
-	}
-}
-*/
+/*Below is the specification for controlling how the page will display in mobile browsers*/
 
 
-@media (max-width: 375px) {
+
+@media only screen and (max-width: 375px) {
 	h2 {
 		padding: 30%;
 	}
@@ -315,10 +388,11 @@ h2 {
 	.mobnav {
 		display: block;
 	}
-	#aboutme {
-		max-width: 75%;
-		padding: inherit;
-		margin-top: 50%;
+	.text {
+		max-width: 100%;
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-top: 20%;
 	}
 	#mobtitle {
 		font-size: 1.25rem;
@@ -328,12 +402,13 @@ h2 {
 	}
 	.logo img {
 		width: 100%;
+		margin-bottom: 40%;
 		height: auto;
 		padding: 1%;
 	}
-	#proimg {
-		height: 100%;
-		width: 100%;
+	#profile_img {
+		height: 60%;
+		width: 60%;
 	}
 	.img_overlay {
 		opacity: 1;
@@ -344,7 +419,29 @@ h2 {
 	.idea_grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	
+	.timeline::after {
+    left: 31px;
+  }
+  	.timecontain {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  	.timecontain::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  	.left::after, .right::after {
+    left: 15px;
+  }
+  	.right {
+    left: 0%;
+  }
+  	.contentleft {
+    background: linear-gradient(to left, rgba(255,255,255,1) 85%, rgba(255,255,255,0.93) 93%, rgba(90,150,66,0.89) 98%, rgba(90,150,66,0.88) 100%);
+  }
 }
 
 
