@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+/**********/
+/*GLOBAL RULES*/
+/**********/
+
 * {
 	box-sizing: border-box;
 }
@@ -13,24 +18,9 @@
 body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 25px;
-	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(85,85,0,1) 69%, rgba(85,85,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(85,85,0,0.89) 54%, rgba(85,85,0,0.8) 100%);
 	color: #FFFFFF;
 	margin: 0;
-}
-
-h2 {
-	font-size: 2rem;
-	padding: 10%;
-/*	margin-top: 30%;*/
-/*	margin-bottom: 30%;*/
-}
-
-.text {
-	padding-right: 20%;
-	padding-left: 20%;
-	max-width: 100%;
-	font-size: 1.2rem;
-/*	margin-top: 10%;*/
 }
 
 .center {
@@ -39,6 +29,20 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+
+h2 {
+	font-size: 2rem;
+	padding: 10%;
+}
+
+footer {
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+/**********/
+/*NAVIGATION RULES*/
+/**********/
 
 .largenav {
     width: 100%;
@@ -57,7 +61,7 @@ h2 {
     height: 10%;
     background-color: #000000;
     position: fixed;
-	z-index: 1;
+	z-index: 2;
 }
 
 .container {
@@ -67,7 +71,6 @@ h2 {
 }
 
 .menu a {
-/*	background-color: #000000;*/
 	color: #FFFFFF;
 	padding: 19px;
 	font-size: 1.5vw;
@@ -83,59 +86,128 @@ h2 {
 	border-radius: 5%;
 }
 
-.logo {
-/*	padding: 10%;*/
-	width: 100%;
-	height: auto;
-	margin-top: 10%;
+/**********/
+/*MOBILE MENU NAVIGATION*/
+/**********/
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 10%;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.project_grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap: 10%;
-	grid-row-gap: 1em;
-	padding-right: 30%;
-	padding-left: 30%;
+#menuToggle input
+{
+  display: block;
+  width: 10%;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
 }
 
-.img_container {
-	position: relative;
-	width: auto;
-	height: auto;
+/*Below is the specification for the animation of the burger button*/
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
 }
 
-.project_img_size {
-	width: 50%;
-	height: 50%;
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
 }
 
-.img_overlay {
-	position: relative;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*Below is the specification for the mobile menu design*/
+
+#menu
+{
+  position: absolute;
+  width: 45%;
+  margin: -25% 0 0 -20%;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #000000;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+#menu a {
+	padding: 10px 0;
+	font-size: 20px;
 	color: #FFFFFF;
-	text-align: center;
 }
 
-.img_container:hover .img_overlay {
-	opacity: 1;
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
 
-.idea_grid {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-}
-
-.ideaimg {
-	font-size: 8vw;
-}
+/**********/
+/*ITEM SPECIFIC RULES*/
+/**********/
 
 #title {
 	margin-right: auto;
@@ -151,18 +223,29 @@ h2 {
 	transition: transform 0.5s;
 }
 
-#profile_img {
+#aboutme img {
 	border-radius: 50%;
-/*	border: 40px thick #FFFFFF;*/
 	padding: 2%;
 	width: 30%;
 	height: 30%;
-/*	margin-top: 100px;*/
-	
-	
 }
 
-/*Below is the approriate styling for the timeline*/
+#aboutme p {
+	padding-right: 20%;
+	padding-left: 20%;
+	max-width: 100%;
+	font-size: 1.2rem;
+}
+
+.logo {
+	width: 100%;
+	height: auto;
+	margin-top: 5%;
+}
+
+/**********/
+/*RULES FOR TIMELINE STYLING*/
+/**********/
 
 .timeline {
   position: relative;
@@ -219,7 +302,7 @@ h2 {
   right: 30px;
   border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent rgba(90,150,66,0.88);
+  border-color: transparent transparent transparent #FF9F55;
 }
 
 .right::before {
@@ -232,7 +315,7 @@ h2 {
   left: 30px;
   border: medium solid white;
   border-width: 10px 10px 10px 0;
-  border-color: transparent rgba(90,150,66,0.88) transparent transparent;
+  border-color: transparent #FF9F55 transparent transparent;
 }
 
 .right::after {
@@ -240,145 +323,96 @@ h2 {
 }
 
 .contentleft {
-  padding: 20px 30px;
-  background: linear-gradient(to right, rgba(255,255,255,1) 85%, rgba(255,255,255,0.93) 93%, rgba(90,150,66,0.89) 98%, rgba(90,150,66,0.88) 100%);
-  position: relative;
-  border-radius: 6px;
-	color: #000000;
+	padding: 20px 30px;
+	position: relative;
+	border-radius: 6px;
+	color: #FFFFFF;
 	font-size: 1rem;
+	border: 3px dotted white;
 }
 
 .contentright {
-  padding: 20px 30px;
-  background: linear-gradient(to left, rgba(255,255,255,1) 85%, rgba(255,255,255,0.93) 93%, rgba(90,150,66,0.89) 98%, rgba(90,150,66,0.88) 100%);
+	padding: 20px 30px;
   	position: relative;
   	border-radius: 6px;
-	color: #000000;
-		font-size: 1rem;
-}
-
-
-/*Below is for the anchored mobile navigation*/
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 20px;
-  left: 10%;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input
-{
-  display: block;
-  width: 10%;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; 
-  z-index: 2; 
-  
-  -webkit-touch-callout: none;
-}
-
-/*Below is the specification for the animation of the burger button*/
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*Below is the specification for the mobile menu design*/
-#menu
-{
-  position: absolute;
-  width: 45%;
-  margin: -30% 0 0 -20%;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #000000;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-
-#menu a {
-	padding: 10px 0;
-	font-size: 20px;
-/*	text-decoration: none;*/
+	border: 3px dotted white;
 	color: #FFFFFF;
+	font-size: 1rem;
 }
 
-#menuToggle input:checked ~ ul
-{
-  transform: none;
+
+/**********/
+/*GRID RULES FOR PROJECTS, SKILLS AND CONTACTS*/
+/**********/
+
+.img_container {
+	position: relative;
+	width: auto;
+	height: auto;
 }
 
-/*Below is the specification for controlling how the page will display in mobile browsers*/
+.project_grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+/*	grid-gap: 0;*/
+/*
+	grid-column-gap: ;
+	grid-row-gap: 1em;
+*/
+	margin-right: 30%;
+	margin-left: 30%;
+}
+
+.project_img_size {
+	width: 50%;
+	height: 50%;
+}
+
+.img_overlay {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	width: 100%;
+	opacity: 0;
+	transition: .25s ease;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.img_container:hover .img_overlay {
+	opacity: 1;
+}
+
+.idea_grid {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.ideaimg {
+	font-size: 8vw;
+	color: #000000;
+}
+
+.contact_grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	
+}
+
+.contact_grid img {
+	width: 50%;
+	height: 50%;
+}
+
+/**********/
+/*MOBILE AND SMALL SCREEN STYLING*/
+/**********/
 
 
-
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
 	h2 {
 		padding: 30%;
 	}
@@ -388,13 +422,13 @@ h2 {
 	.mobnav {
 		display: block;
 	}
-	.text {
+	#aboutme p {
 		max-width: 100%;
 		padding-left: 10%;
 		padding-right: 10%;
 		margin-top: 20%;
 	}
-	#mobtitle {
+	.mobnav h1 {
 		font-size: 1.25rem;
 		margin-top: -2%;
 		margin-left: 40%;
@@ -416,7 +450,7 @@ h2 {
 	.project_grid {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	.idea_grid {
+	.idea_grid, .contact_grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.timeline::after {
@@ -438,9 +472,6 @@ h2 {
   }
   	.right {
     left: 0%;
-  }
-  	.contentleft {
-    background: linear-gradient(to left, rgba(255,255,255,1) 85%, rgba(255,255,255,0.93) 93%, rgba(90,150,66,0.89) 98%, rgba(90,150,66,0.88) 100%);
   }
 }
 
