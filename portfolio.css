@@ -25,6 +25,7 @@ body {
 
 .center {
 	text-align: center;
+	align-content: center;
 	display: block;
     margin-left: auto;
     margin-right: auto;
@@ -243,6 +244,26 @@ footer {
 	margin-top: 5%;
 }
 
+.ContactGrid img {
+	width: 50%;
+	height: 50%;
+}
+
+.ContactGrid .img_container {
+	width: 50%;
+	height: 50%;
+}
+
+.ProjectGrid img {
+	width: 50%;
+	height: 50%;
+}
+
+.SkillsGrid i {
+	font-size: 8vw;
+	color: #000000;
+}
+
 /**********/
 /*RULES FOR TIMELINE STYLING*/
 /**********/
@@ -351,21 +372,11 @@ footer {
 	height: auto;
 }
 
-.project_grid {
+.ProjectGrid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-/*	grid-gap: 0;*/
-/*
-	grid-column-gap: ;
-	grid-row-gap: 1em;
-*/
 	margin-right: 30%;
 	margin-left: 30%;
-}
-
-.project_img_size {
-	width: 50%;
-	height: 50%;
 }
 
 .img_overlay {
@@ -386,25 +397,15 @@ footer {
 	opacity: 1;
 }
 
-.idea_grid {
+.SkillsGrid {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 }
 
-.ideaimg {
-	font-size: 8vw;
-	color: #000000;
-}
-
-.contact_grid {
+.ContactGrid {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	
-}
-
-.contact_grid img {
-	width: 50%;
-	height: 50%;
 }
 
 /**********/
@@ -447,10 +448,10 @@ footer {
 	.img_overlay {
 		opacity: 1;
 	}
-	.project_grid {
+	.ProjectGrid {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	.idea_grid, .contact_grid {
+	.SkillsGrid, .ContactGrid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.timeline::after {
