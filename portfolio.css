@@ -34,6 +34,7 @@ body {
 h2 {
 	font-size: 2rem;
 	padding: 10%;
+	font-family: 'Yellowtail', cursive;
 }
 
 footer {
@@ -47,7 +48,7 @@ footer {
 
 .largenav {
     width: 100%;
-    height: 10%;
+    height: 9%;
     background-color: #000000;
     position: fixed;
 	top: 0;
@@ -73,7 +74,7 @@ footer {
 
 .menu a {
 	color: #FFFFFF;
-	padding: 19px;
+	padding: 15px;
 	font-size: 1.5vw;
 	text-align: center;
 	text-decoration: none;
@@ -91,109 +92,86 @@ footer {
 /*MOBILE MENU NAVIGATION*/
 /**********/
 
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 20px;
-  left: 10%;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+#menuToggle {
+	display: block;
+  	position: relative;
+	top: 20px;
+	left: 10%;
+	z-index: 1;
+  	-webkit-user-select: none;
+ 	user-select: none;
 }
 
-#menuToggle input
-{
-  display: block;
-  width: 10%;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; 
-  z-index: 2; 
-  
-  -webkit-touch-callout: none;
+#menuToggle input {
+  	display: block;
+  	width: 10%;
+  	height: 32px;
+  	position: absolute;
+  	top: -7px;
+  	left: -5px;
+  	cursor: pointer;
+  	opacity: 0; 
+  	z-index: 2; 
+  	-webkit-touch-callout: none;
 }
 
 /*Below is the specification for the animation of the burger button*/
 
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+#menuToggle span {
+  	display: block;
+  	width: 33px;
+  	height: 4px;
+  	margin-bottom: 5px;
+  	position: relative;
+  	background: #cdcdcd;
+  	border-radius: 3px;
+  	z-index: 1;
+  	transform-origin: 4px 0px;
+  	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
+#menuToggle span:first-child {
+  	transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
+#menuToggle span:nth-last-child(2) {
+  	transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+#menuToggle input:checked ~ span {
+  	opacity: 1;
+  	transform: rotate(45deg) translate(-2px, -1px);
+  	background: #232323;
 }
 
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  	opacity: 0;
+  	transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  	transform: rotate(-45deg) translate(0, -1px);
 }
 
 /*Below is the specification for the mobile menu design*/
 
-#menu
-{
-  position: absolute;
-  width: 45%;
-  margin: -25% 0 0 -20%;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #000000;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+#menu {
+  	position: absolute;
+  	width: 45%;
+  	margin: -25% 0 0 -20%;
+  	padding: 50px;
+  	padding-top: 125px;
+  	background: #000000;
+  	list-style-type: none;
+  	-webkit-font-smoothing: antialiased;
+  	transform-origin: 0% 0%;
+  	transform: translate(-100%, 0);
+  	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
-
 
 #menu a {
 	padding: 10px 0;
@@ -201,9 +179,8 @@ footer {
 	color: #FFFFFF;
 }
 
-#menuToggle input:checked ~ ul
-{
-  transform: none;
+#menuToggle input:checked ~ ul{
+  	transform: none;
 }
 
 /**********/
@@ -212,7 +189,6 @@ footer {
 
 #title {
 	margin-right: auto;
-/*	padding: 5px 20px 0px 20px;*/
 	margin-top: 1%;
 	margin-bottom: 0;
 	margin-left: 2%;
@@ -269,78 +245,78 @@ footer {
 /**********/
 
 .timeline {
-  position: relative;
-  max-width: 750px;
-  margin: 0 auto;
+  	position: relative;
+  	max-width: 750px;
+  	margin: 0 auto;
 }
 
 .timeline::after {
-  content: '';
-  position: absolute;
-  width: 1%;
-  background-color: white;
-  top: -2%;
-  bottom: -2%;
-  left: 50%;
-  margin-left: -3px;
+  	content: '';
+  	position: absolute;
+  	width: 1%;
+  	background-color: white;
+  	top: -2%;
+  	bottom: -2%;
+  	left: 50%;
+  	margin-left: -3px;
 }
 
 .timecontain {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+  	padding: 10px 40px;
+  	position: relative;
+  	background-color: inherit;
+  	width: 50%;
 }
 
 .timecontain::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -3.5%;
-  background-color: #FF9F55;
-  border: 4px solid #5a9642;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+  	content: '';
+  	position: absolute;
+  	width: 25px;
+  	height: 25px;
+  	right: -3.5%;
+  	background-color: #FF9F55;
+  	border: 4px solid #5a9642;
+  	top: 15px;
+  	border-radius: 50%;
+  	z-index: 1;
 }
 
 .left {
-  left: 0;
+  	left: 0;
 }
 
 .right {
-  left: 50%;
+  	left: 50%;
 }
 
 .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #FF9F55;
+  	content: " ";
+  	height: 0;
+  	position: absolute;
+  	top: 22px;
+  	width: 0;
+  	z-index: 1;
+  	right: 30px;
+  	border: medium solid white;
+  	border-width: 10px 0 10px 10px;
+  	border-color: transparent transparent transparent #FF9F55;
 }
 
 .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #FF9F55 transparent transparent;
+  	content: " ";
+  	height: 0;
+  	position: absolute;
+  	top: 22px;
+  	width: 0;
+  	z-index: 1;
+  	left: 30px;
+  	border: medium solid white;
+  	border-width: 10px 10px 10px 0;
+  	border-color: transparent #FF9F55 transparent transparent;
 }
 
 .right::after {
-  left: -3%;
+  	left: -3%;
 }
 
 .contentleft {
@@ -375,6 +351,10 @@ footer {
 .ProjectGrid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+/*
+	display: -ms-grid;
+	-ms-grid-columns: repeat(1fr 1vw 1fr 1vw);
+*/
 	margin-right: 30%;
 	margin-left: 30%;
 }
@@ -404,8 +384,7 @@ footer {
 
 .ContactGrid {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	
+	grid-template-columns: repeat(5, 1fr);	
 }
 
 /**********/
