@@ -1,44 +1,46 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="Description" content="Lewis Coldwell is a Full Stack Web Developer proficient in several in-demand languages">
-<meta name="Keywords" content="HTML,CSS,Ruby,Ruby on Rails,Javascript">
-<meta name="author" content="Lewis Coldwell">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="Description" content="Lewis Coldwell is a Full Stack Web Developer proficient in several in-demand languages">
+    <meta name="Keywords" content="HTML,CSS,Ruby,Ruby on Rails,Javascript">
+    <meta name="author" content="Lewis Coldwell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>The Yorkshire Coder - Portfolio</title>
+    <title>The Yorkshire Coder - Portfolio</title>
 
-<!--Styling-->
+    <!--Styling-->
 
-<!--THIS STYLESHEET CONTAINS ALL OF THE PAGES STYLING-->
-<link href="portfolio.css" rel="stylesheet" type="text/css">
+    <!--THIS STYLESHEET CONTAINS ALL OF THE PAGES STYLING-->
+    <link href="portfolio.css" rel="stylesheet" type="text/css">
 
-<!--THIS STYLESHEET CONTAINS THE FONT USED FOR THIS PAGES CONTENT-->
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Yellowtail" rel="stylesheet">
+    <!--THIS STYLESHEET CONTAINS THE FONT USED FOR THIS PAGES CONTENT-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Yellowtail" rel="stylesheet">
 
-<!--THIS STYLESHEET CONTAINS SOME OF THE LICENSED FONTS AND ICONS USED ON THIS PAGE-->
-<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <!--THIS STYLESHEET CONTAINS SOME OF THE LICENSED FONTS AND ICONS USED ON THIS PAGE-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-<!--FAVICON-->
+    <!--FAVICON-->
 
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
-<!--Scripting-->
+    <!--Scripting-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!--THIS SCRIPT ALLOWS FOR SMOOTH SCROLLING NAVIGATION-->
-   <script>$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+    <!--THIS SCRIPT ALLOWS FOR SMOOTH SCROLLING NAVIGATION-->
+    <script>
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-});
-</script>
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    </script>
 </head>
 
 
@@ -47,258 +49,271 @@
 
 <body id="toppage">
 
-<header role="banner">
+    <header role="banner">
 
-<!--This is a fixed nav bar for desktop viewing-->
+        <!--This is a fixed nav bar for desktop viewing-->
 
-<div class="largenav">
-	
-<nav class="container menu" role="navigation">
-	<h1 id="title">The Yorkshire Coder&trade;</h1>
-	<a href="#toppage">Home</a>
-	<a href="#aboutme">About</a>
-	<a href="#timelinehead">Timeline</a>
-	<a href="#skills">Skills</a>
-	<a href="#projects">Projects</a>
-	<a href="#contactme">Contact</a>
-</nav>
+        <div class="largenav">
 
-</div>
+            <nav class="container menu" role="navigation">
+                <h1 id="title">The Yorkshire Coder&trade;</h1>
+                <a href="#toppage">Home</a>
+                <a href="#aboutme">About</a>
+                <a href="#timelinehead">Timeline</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contactme">Contact</a>
+            </nav>
 
-<!--This is a fixed burger nav bar for optimal viewing on mobile devices-->
-<!--The menu design has been sourced from Erik Terwan https://codepen.io/erikterwan/pen/EVzeRP-->
+        </div>
 
-<div class="mobnav">
+        <!--This is a fixed burger nav bar for optimal viewing on mobile devices-->
+        <!--The menu design has been sourced from Erik Terwan https://codepen.io/erikterwan/pen/EVzeRP-->
 
-<nav role="navigation">
+        <div class="mobnav">
 
-  <div id="menuToggle">
-   
-    <input type="checkbox"/>
-    <span></span>
-    <span></span>
-    <span></span>
-    
-    <ul id="menu">
-        <li><a href="#toppage">Home</a></li>
-        <li><a href="#aboutme">About</a></li>
-        <li><a href="#timelinehead">Timeline</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contactme">Contact</a></li>
-    </ul>
-  </div>
-<h1 class="center">The Yorkshire Coder&trade;</h1>
-</nav>
+            <nav role="navigation">
 
-</div>
+                <div id="menuToggle">
 
-</header>
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
+                    <ul id="menu">
+                        <li><a href="#toppage">Home</a></li>
+                        <li><a href="#aboutme">About</a></li>
+                        <li><a href="#timelinehead">Timeline</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contactme">Contact</a></li>
+                    </ul>
+                </div>
+                <h1 class="center">The Yorkshire Coder&trade;</h1>
+            </nav>
 
+        </div>
+
+    </header>
 
 
 
-<main role="main">
-
-<div class="logo">
-	<img class="center" src="assets/lewis.png" alt="logo">
-</div>
 
 
-<div id="aboutme" class="center">
-	
-	<h2>About Me</h2>	
-		
-		<img src="assets/profileimage.jpg" alt="Profile Image">
+    <main role="main">
 
-			<p>
-				Hi, I'm Lewis Coldwell - although you can call me Lulu! I'm currently studying Full Stack Web Development in Sydney, Australia.
-				<br><br>
-				I have a passion for outdoor sports, especially the more extreme ones like skiing, mountain biking (even competing for my home county!), wake-boarding and wind-surfing.  Outside of sports, I take a keen interest in travelling and volunteering for national and international events.
-			</p>
-</div>
-<div id="timelinehead">
+        <div class="logo">
+            <img class="center" src="assets/lewis.png" alt="logo">
+        </div>
 
-	<h2 class="center">A brief journey through time...</h2>
-    
-</div>
-<!--To see how I did this, and more - check out the codepen where the final product was born: https://codepen.io/lcoldwell/project/editor/ZLPOxb-->
- 
-<!-- n.b. The code to make this happen was incepted by the good guys at W3-->
-  <div class="timeline" data-aos="fade-up">
 
-  <div class="timecontain left">
-    <div class="contentleft">
-      <h3>2018</h3>
-      <p>Started designing a <em>Terminal App</em> to reinvent the Schools registry system.  This project was carried out with a programming buddy.</p>
-    </div>
-  </div>
-  <div class="timecontain right">
-    <div class="contentright">
-      <h3>2018</h3>
-      <p>Commenced studies at the <em>Coder Academy</em>.  Studying Full Stack Web Development in their 6 month bootcamp program.</p>
-    </div>
-  </div>
-  <div class="timecontain left">
-    <div class="contentleft">
-      <h3>2017</h3>
-      <p>Promoted to <em>Head Bartender</em> within the Solotel group in Sydney, Australia.</p>
-    </div>
-  </div>
-  <div class="timecontain right">
-    <div class="contentright">
-      <h3>2015</h3>
-      <p>Graduated from the <em>University of Aberdeen</em>, Scotland with MA(hons) Economics - Upper Second Class Classification</p>
-    </div>
-  </div>
-  <div class="timecontain left">
-    <div class="contentleft">
-      <h3>2014</h3>
-      <p>Volunteered at the Glasgow <em>Commonwealth Games</em> and worked with the Cycling Delivery Team to ensure efficient and proper running of cycling events.</p>
-    </div>
-  </div>
-  <div class="timecontain right">
-    <div class="contentright">
-      <h3>2010</h3>
-      <p>Commenced studies at the <em>University of Aberdeen</em>, Scotland.</p>
-    </div>
-  </div>
-</div>
+        <div id="aboutme" class="center">
 
-<div id="skills" class="center">
-	
-<h2>Skills</h2>
-	
-<div class="SkillsGrid">
+            <h2>About Me</h2>
 
-	<div class="img_container">
-		<i class="devicon-javascript-plain "></i>
-			<p class="img_overlay">
-				JavaScript	
-			</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-angularjs-plain "></i>
-			<p class="img_overlay">
-				Angular JS
-	</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-react-original "></i>
-			<p class="img_overlay">
-				React JS
-			</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-nodejs-plain "></i>
-			<p class="img_overlay">
-				Node JS
-			</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-ruby-plain "></i>
-			<p class="img_overlay">
-				Ruby
-			</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-rails-plain "></i>
-			<p class="img_overlay">
-				Ruby on Rails
-			</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-html5-plain "></i>
-			<p class="img_overlay">
-				HTML 5
-			</p>
-	</div>
-	<div class="img_container">
-		<i class="devicon-css3-plain "></i>
-			<p class="img_overlay">
-				CSS 3
-			</p>
-	</div>
-	
-	
-</div>
-	
-</div>
+            <img src="assets/profileimage.jpg" alt="Profile Image">
 
-<div id="projects" class="center">
-	
-	<h2>Projects</h2>
+            <p>
+                Hi, I'm Lewis Coldwell - although you can call me Lulu! I'm currently studying Full Stack Web Development in Sydney, Australia.
+                <br><br> I have a passion for outdoor sports, especially the more extreme ones like skiing, mountain biking (even competing for my home county!), wake-boarding and wind-surfing. Outside of sports, I take a keen interest in travelling and
+                volunteering for national and international events.
+            </p>
+        </div>
+        <div id="timelinehead">
 
-		<div class="ProjectGrid">
-	
-	
-			<div class="img_container"><a href="https://github.com/lew-cold/terminal_app"><img src="assets/icons/checklist.png" alt="Registry App" title="Registry App"></a>
-				<p class="img_overlay">
-					Registry App
-				</p>
-			</div>
-			<div class="img_container"><a href="https://github.com/lew-cold/banking"><img src="assets/icons/atmicon.png" alt="Banking App" title="Banking App"></a>
-				<p class="img_overlay">
-					Banking App
-				</p>
-			</div>
+            <h2 class="center">A brief journey through time...</h2>
 
-			<!--	Additional projects can be added using the structure below-->
-			<!--
+        </div>
+        <!--To see how I did this, and more - check out the codepen where the final product was born: https://codepen.io/lcoldwell/project/editor/ZLPOxb-->
+
+        <!-- n.b. The code to make this happen was incepted by the good guys at W3-->
+        <div class="timeline" data-aos="fade-up">
+            <div class="timecontain right">
+                <div class="contentright">
+                    <h3>2018</h3>
+                    <p>Started designing a <em>Two-Sided Marketplace</em> to sell primary produce to end consumers. The project utlisised Ruby Logic, Rails, HTML and CSS. This project was completed individually as a major assessment for <em>Coder Academy</em>.</p>
+                </div>
+            </div>
+            <div class="timecontain left">
+                <div class="contentleft">
+                    <h3>2018</h3>
+                    <p>Started designing a <em>Terminal App</em> to reinvent the Schools registry system. This project was carried out with a programming buddy.</p>
+                </div>
+            </div>
+            <div class="timecontain right">
+                <div class="contentright">
+                    <h3>2018</h3>
+                    <p>Commenced studies at the <em>Coder Academy</em>. Studying Full Stack Web Development in their 6 month bootcamp program.</p>
+                </div>
+            </div>
+            <div class="timecontain left">
+                <div class="contentleft">
+                    <h3>2017</h3>
+                    <p>Promoted to <em>Head Bartender</em> within the Solotel group in Sydney, Australia.</p>
+                </div>
+            </div>
+            <div class="timecontain right">
+                <div class="contentright">
+                    <h3>2015</h3>
+                    <p>Graduated from the <em>University of Aberdeen</em>, Scotland with MA(hons) Economics - Upper Second Class Classification</p>
+                </div>
+            </div>
+            <div class="timecontain left">
+                <div class="contentleft">
+                    <h3>2014</h3>
+                    <p>Volunteered at the Glasgow <em>Commonwealth Games</em> and worked with the Cycling Delivery Team to ensure efficient and proper running of cycling events.</p>
+                </div>
+            </div>
+            <div class="timecontain right">
+                <div class="contentright">
+                    <h3>2010</h3>
+                    <p>Commenced studies at the <em>University of Aberdeen</em>, Scotland.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="center">
+
+            <h2>Skills</h2>
+
+            <div class="SkillsGrid">
+
+                <div class="img_container">
+                    <i class="devicon-javascript-plain "></i>
+                    <p class="img_overlay">
+                        JavaScript
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-angularjs-plain "></i>
+                    <p class="img_overlay">
+                        Angular JS
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-react-original "></i>
+                    <p class="img_overlay">
+                        React JS
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-nodejs-plain "></i>
+                    <p class="img_overlay">
+                        Node JS
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-ruby-plain "></i>
+                    <p class="img_overlay">
+                        Ruby
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-rails-plain "></i>
+                    <p class="img_overlay">
+                        Ruby on Rails
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-html5-plain "></i>
+                    <p class="img_overlay">
+                        HTML 5
+                    </p>
+                </div>
+                <div class="img_container">
+                    <i class="devicon-css3-plain "></i>
+                    <p class="img_overlay">
+                        CSS 3
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="projects" class="center">
+
+            <h2>Projects</h2>
+
+            <div class="ProjectGrid">
+
+
+                <div class="img_container">
+                    <a href="https://github.com/lew-cold/terminal_app"><img src="assets/icons/checklist.png" alt="Registry App" title="Registry App"></a>
+                    <p class="img_overlay">
+                        Registry App - Ruby
+                    </p>
+                </div>
+                <div class="img_container">
+                    <a href="https://github.com/lew-cold/banking"><img src="assets/icons/atmicon.png" alt="Banking App" title="Banking App"></a>
+                    <p class="img_overlay">
+                        Banking App - Ruby
+                    </p>
+                </div>
+                <div class="img_container">
+                    <a href="https://github.com/lew-cold/farmtable"><img src="assets/icons/farmt.png" alt="Two-Sided Marketplace" title="Two-Sided Marketplace"></a>
+                    <p class="img_overlay">
+                        Two-Sided Marketplace - Rails
+                    </p>
+                </div>
+
+                <!--	Additional projects can be added using the structure below-->
+                <!--
 				<div>GRID ITEM</div>
 				<div>GRID ITEM</div>
 			-->
-	
-		</div>
 
-</div>
+            </div>
 
-<div id="contactme" class="center">
+        </div>
 
-	<h2> Curious to find out more?</h2>
+        <div id="contactme" class="center">
 
-		<div class="ContactGrid">
+            <h2> Curious to find out more?</h2>
 
-			<div class="img_container">
-				<a href="https://stackoverflow.com/users/9352500/lcoldwell"><img src="assets/icons/stack-overflow.svg" alt="Stack Overflow" title="Stack Overflow"></a>
-					<p class="img_overlay">
-						Stack Overflow
-					</p>
-			</div>
-			<div class="img_container">
-				<a href="https://github.com/lew-cold/"><img src="assets/icons/github-square.svg" alt="Git Hub" title="GitHub"></a>
-					<p class="img_overlay">
-						GitHub
-					</p>
-			</div>
-			<div class="img_container">
-				<a href="https://au.linkedin.com/in/lewiscoldwell"><img src="assets/icons/linkedin.svg" alt="Linked In" title="LinkedIn"></a>
-					<p class="img_overlay">
-						LinkedIn
-					</p>
-			</div>
-			<div class="img_container">
-				<a href="http://blog.theyorkshirecoder.com"><img src="assets/icons/medium.svg" alt="Medium" title="Medium"></a>
-					<p class="img_overlay">
-						Medium
-					</p>
-			</div>
-			<div class="img_container">
-				<a href="mailto:lewis@theyorkshirecoder.com"><img src="assets/icons/envelope.svg" alt="Email" title="Email"></a>
-					<p class="img_overlay">
-						Email Me
-					</p>
-			</div>
+            <div class="ContactGrid">
 
-		</div>
+                <div class="img_container">
+                    <a href="https://stackoverflow.com/users/9352500/lcoldwell"><img src="assets/icons/stack-overflow.svg" alt="Stack Overflow" title="Stack Overflow"></a>
+                    <p class="img_overlay">
+                        Stack Overflow
+                    </p>
+                </div>
+                <div class="img_container">
+                    <a href="https://github.com/lew-cold/"><img src="assets/icons/github-square.svg" alt="Git Hub" title="GitHub"></a>
+                    <p class="img_overlay">
+                        GitHub
+                    </p>
+                </div>
+                <div class="img_container">
+                    <a href="https://au.linkedin.com/in/lewiscoldwell"><img src="assets/icons/linkedin.svg" alt="Linked In" title="LinkedIn"></a>
+                    <p class="img_overlay">
+                        LinkedIn
+                    </p>
+                </div>
+                <div class="img_container">
+                    <a href="http://blog.theyorkshirecoder.com"><img src="assets/icons/medium.svg" alt="Medium" title="Medium"></a>
+                    <p class="img_overlay">
+                        Medium
+                    </p>
+                </div>
+                <div class="img_container">
+                    <a href="mailto:lewis@theyorkshirecoder.com"><img src="assets/icons/envelope.svg" alt="Email" title="Email"></a>
+                    <p class="img_overlay">
+                        Email Me
+                    </p>
+                </div>
 
-</div>
-</main>
+            </div>
 
-<footer>
-	&copy; Lewis Coldwell 2018
-</footer>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Lewis Coldwell 2018
+    </footer>
 
 </body>
 
